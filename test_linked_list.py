@@ -220,71 +220,71 @@ class TestLinkedList(unittest.TestCase):
         ll.append(third_node)
         self.assertEqual(third_node, second_node.next)
 
-    # def test_append_to_two_node_list_previous_of_third_is_second(self):
-    #     """
-    #     Test 23: When appending a third node to a two-node list, the third node's `previous`
-    #     is the second node.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     self.assertEqual(second_node, third_node.previous)
+    def test_append_to_two_node_list_previous_of_third_is_second(self):
+        """
+        Test 23: When appending a third node to a two-node list, the third node's `previous`
+        is the second node.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        self.assertEqual(second_node, third_node.previous)
 
-    # def test_append_to_two_node_list_sets_next_of_third_node_to_sentinel(self):
-    #     """
-    #     Test 24:When appending to a two-node list, the third node's `next` is the sentinel.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     self.assertEqual(ll, third_node.next)
+    def test_append_to_two_node_list_sets_next_of_third_node_to_sentinel(self):
+        """
+        Test 24:When appending to a two-node list, the third node's `next` is the sentinel.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        self.assertEqual(ll, third_node.next)
 
-    # def test_append_to_two_node_list_sets_previous_of_sentinel_to_third_node(self):
-    #     """
-    #     Test 25: When appending to a two-node list, the sentinel's `previous` is the third node.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     self.assertEqual(third_node, ll.previous)
+    def test_append_to_two_node_list_sets_previous_of_sentinel_to_third_node(self):
+        """
+        Test 25: When appending to a two-node list, the sentinel's `previous` is the third node.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        self.assertEqual(third_node, ll.previous)
 
-    # # """
-    # # Three-Node List
-    # # """
+    # """
+    # Three-Node List
+    # """
 
-    # def test_last_of_three_nodes(self):
-    #     """
-    #     Test 26: In a three-node list, the third node is the last node.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     self.assertEqual(third_node, ll.last_node())
+    def test_last_of_three_nodes(self):
+        """
+        Test 26: In a three-node list, the third node is the last node.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        self.assertEqual(third_node, ll.last_node())
 
-    # def test_append_to_three_node_list(self):
-    #     """
-    #     Test 27: When appending to three-node list, the fourth node should be inserted
-    #     between the third node and the sentinel node.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     fourth_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     ll.append(fourth_node)
-    #     self.assertEqual(fourth_node, ll.previous)
-    #     self.assertEqual(ll, fourth_node.next)
-    #     self.assertEqual(third_node, fourth_node.previous)
-    #     self.assertEqual(fourth_node, third_node.next)
+    def test_append_to_three_node_list(self):
+        """
+        Test 27: When appending to three-node list, the fourth node should be inserted
+        between the third node and the sentinel node.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        fourth_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        ll.append(fourth_node)
+        self.assertEqual(fourth_node, ll.previous)
+        self.assertEqual(ll, fourth_node.next)
+        self.assertEqual(third_node, fourth_node.previous)
+        self.assertEqual(fourth_node, third_node.next)
 
     # # """
     # # Deletion

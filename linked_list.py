@@ -41,6 +41,7 @@ class LinkedList:
     def append(self, node):
         while not self.next.is_sentinel():
             self = self.next
+        #inserting before the sentinal
         left_node = self
         right_node = self.next #senitel node
         node.previous = left_node
