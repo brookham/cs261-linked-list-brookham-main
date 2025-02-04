@@ -135,54 +135,54 @@ class TestLinkedList(unittest.TestCase):
         ll.append(appendee)
         self.assertEqual(ll, appendee.previous)
 
-    # def test_append_to_empty_list_sets_next_of_new_node_to_sentinel(self):
-    #     """
-    #     Test 15: Appending to an empty list sets the new node's `next` to the sentinel.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertEqual(ll, appendee.next)
+    def test_append_to_empty_list_sets_next_of_new_node_to_sentinel(self):
+        """
+        Test 15: Appending to an empty list sets the new node's `next` to the sentinel.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertEqual(ll, appendee.next)
 
-    # # """
-    # # Two-Node List
-    # # """
+    # """
+    # Two-Node List
+    # """
 
-    # def test_list_with_two_nodes_is_not_empty(self):
-    #     """
-    #     Test 16: A list with two nodes is not empty.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertFalse(ll.is_empty())
+    def test_list_with_two_nodes_is_not_empty(self):
+        """
+        Test 16: A list with two nodes is not empty.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertFalse(ll.is_empty())
 
-    # def test_first_of_two_nodes_is_not_last(self):
-    #     """
-    #     Test 17: In a two-node list, the first node is not last.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertFalse(ll.is_last_node())
+    def test_first_of_two_nodes_is_not_last(self):
+        """
+        Test 17: In a two-node list, the first node is not last.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertFalse(ll.is_last_node())
 
-    # def test_second_of_two_nodes_is_last_node(self):
-    #     """
-    #     Test 18: In a two-node list, the second node is last.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertTrue(appendee.is_last_node())
+    def test_second_of_two_nodes_is_last_node(self):
+        """
+        Test 18: In a two-node list, the second node is last.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertTrue(appendee.is_last_node())
 
-    # def test_last_of_two_nodes(self):
-    #     """
-    #     Test 19: In a two-node list, the second node is the last node.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertEqual(appendee, ll.last_node())
+    def test_last_of_two_nodes(self):
+        """
+        Test 19: In a two-node list, the second node is the last node.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertEqual(appendee, ll.last_node())
 
     # def test_append_to_two_node_list_next_of_sentinel_is_second(self):
     #     """

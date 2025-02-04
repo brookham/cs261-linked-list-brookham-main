@@ -30,13 +30,12 @@ class LinkedList:
             return False
         
     def is_last_node(self):
-        while not(self.is_empty() or self.next.is_sentinel):
-            self = self.next
-        return self
+        return self.is_empty() or self.next.is_sentinel()
+
     
     def last_node(self):
-        if not (self.is_empty() or self.next.is_sentinel()):
-            self.last_node(self.next)
+        if (self.is_empty() or self.next.is_sentinel()):
+            self = self.last_node(self.next)
         return self
     
     def append(self, node):
