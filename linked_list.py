@@ -39,9 +39,17 @@ class LinkedList:
             self.last_node(self.next)
         return self
     
-    def append(self):
-        if not(self.next.is_sentinel()):
+    def append(self, node):
+        while (self.next.is_sentinel()):
+            left_node = self
+            right_node = self.next
+            node.previous = left_node
+            node.next = right_node
+            left_node.next = node
+            right_node.previous = node
+            self.append(self)
+        else:
             self = self.next
-        
+        return self
 
 

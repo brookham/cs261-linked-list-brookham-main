@@ -107,33 +107,33 @@ class TestLinkedList(unittest.TestCase):
         ll = LinkedList()
         self.assertEqual(ll, ll.last_node())
 
-    # def test_append_to_empty_list_sets_next_of_sentinel_to_new_node(self):
-    #     """
-    #     Test 12: Appending to an empty list sets the sentinel's `next` to the new node.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertEqual(appendee, ll.next)
+    def test_append_to_empty_list_sets_next_of_sentinel_to_new_node(self):
+        """
+        Test 12: Appending to an empty list sets the sentinel's `next` to the new node.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertEqual(appendee, ll.next)
 
-    # def test_append_to_empty_list_sets_previous_of_sentinel_to_new_node(self):
-    #     """
-    #     Test 13: Appending to an empty list sets the sentinel's `previous` to the new node.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertEqual(appendee, ll.previous)
+    def test_append_to_empty_list_sets_previous_of_sentinel_to_new_node(self):
+        """
+        Test 13: Appending to an empty list sets the sentinel's `previous` to the new node.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertEqual(appendee, ll.previous)
 
-    # def test_append_to_empty_list_sets_previous_of_new_node_to_sentinel(self):
-    #     """
-    #     Test 14: Appending to an empty list sets the sentinel's `previous` to the new node.
-    #     Appending to an empty list sets the new node's `previous` to the sentinel.
-    #     """
-    #     ll = LinkedList()
-    #     appendee = LinkedList(fake_value())
-    #     ll.append(appendee)
-    #     self.assertEqual(ll, appendee.previous)
+    def test_append_to_empty_list_sets_previous_of_new_node_to_sentinel(self):
+        """
+        Test 14: Appending to an empty list sets the sentinel's `previous` to the new node.
+        Appending to an empty list sets the new node's `previous` to the sentinel.
+        """
+        ll = LinkedList()
+        appendee = LinkedList(fake_value())
+        ll.append(appendee)
+        self.assertEqual(ll, appendee.previous)
 
     # def test_append_to_empty_list_sets_next_of_new_node_to_sentinel(self):
     #     """
