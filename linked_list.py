@@ -34,21 +34,20 @@ class LinkedList:
 
     
     def last_node(self):
-        if (self.is_empty() or self.next.is_sentinel()):
-            self = self.last_node(self.next)
-        return self
+        if self.is_empty() or self.next.is_sentinel():
+            return self
+        return self.next.last_node()
     
     def append(self, node):
-        while (self.next.is_sentinel()):
-            left_node = self
-            right_node = self.next
-            node.previous = left_node
-            node.next = right_node
-            left_node.next = node
-            right_node.previous = node
-            self.append(self)
-        else:
+        while not self.next.is_sentinel():
             self = self.next
-        return self
+        left_node = self
+        right_node = self.next #senitel node
+        node.previous = left_node
+        node.next = right_node
+        left_node.next = node
+        right_node.previous = node
+        
+        return node
 
 
