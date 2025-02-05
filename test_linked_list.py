@@ -368,59 +368,59 @@ class TestLinkedList(unittest.TestCase):
         ll.append(second_node)
         self.assertEqual(second_node, ll.search(value))
 
-    # # """
-    # # Maintaining Order
-    # # """
+    # """
+    # Maintaining Order
+    # """
 
-    # def test_insert_in_order_when_empty(self):
-    #     """
-    #     Test 33: Inserting a node in an empty sorted list just appends the new node.
-    #     """
-    #     ll = LinkedList()
-    #     ll.insert_in_order(LinkedList(8))
-    #     self.assertEqual(None, ll.at_position(0).value)
-    #     self.assertEqual(8, ll.at_position(1).value)
+    def test_insert_in_order_when_empty(self):
+        """
+        Test 33: Inserting a node in an empty sorted list just appends the new node.
+        """
+        ll = LinkedList()
+        ll.insert_in_order(LinkedList(8))
+        self.assertEqual(None, ll.at_position(0).value)
+        self.assertEqual(8, ll.at_position(1).value)
 
-    # def test_insert_in_order_less_than(self):
-    #     """
-    #     Test 34: Inserting a node in a sorted list when the node's value is less than an
-    #     existing node's value places the new node before the existing one.
-    #     Example: None -> 8 becomes None -> 6 -> 8
-    #     """
-    #     ll = LinkedList()
-    #     ll.insert_in_order(LinkedList(8))
-    #     ll.insert_in_order(LinkedList(6))
-    #     self.assertEqual(6, ll.at_position(1).value)
+    def test_insert_in_order_less_than(self):
+        """
+        Test 34: Inserting a node in a sorted list when the node's value is less than an
+        existing node's value places the new node before the existing one.
+        Example: None -> 8 becomes None -> 6 -> 8
+        """
+        ll = LinkedList()
+        ll.insert_in_order(LinkedList(8))
+        ll.insert_in_order(LinkedList(6))
+        self.assertEqual(6, ll.at_position(1).value)
 
-    # def test_insert_in_order_greater_than(self):
-    #     """
-    #     Test 35: Inserting a node in a sorted list when the node's value is greater than
-    #     an existing node's value places the new node after te existing one.
-    #     Example: None -> 8 becomes None -> 8 -> 9
-    #     """
-    #     ll = LinkedList()
-    #     ll.insert_in_order(LinkedList(8))
-    #     ll.insert_in_order(LinkedList(9))
-    #     self.assertEqual(9, ll.at_position(2).value)
+    def test_insert_in_order_greater_than(self):
+        """
+        Test 35: Inserting a node in a sorted list when the node's value is greater than
+        an existing node's value places the new node after te existing one.
+        Example: None -> 8 becomes None -> 8 -> 9
+        """
+        ll = LinkedList()
+        ll.insert_in_order(LinkedList(8))
+        ll.insert_in_order(LinkedList(9))
+        self.assertEqual(9, ll.at_position(2).value)
 
-    # def test_insert_in_order_maintains_order_of_values(self):
-    #     """
-    #     Test 36: Inserting nodes of arbitrary values results in the list maintaining the
-    #     sorted order of nodes based on their value.
-    #     Example: inserting 8, 6, 7, 5, 3, 0, 9 results in: 0, 3, 5, 6, 7, 8, 9
-    #     """
-    #     values = [8, 6, 7, 5, 3, 0, 9]
-    #     ll = LinkedList()
-    #     for value in values:
-    #         ll.insert_in_order(LinkedList(value))
-    #     self.assertEqual(None, ll.at_position(0).value)
-    #     self.assertEqual(0, ll.at_position(1).value)
-    #     self.assertEqual(3, ll.at_position(2).value)
-    #     self.assertEqual(5, ll.at_position(3).value)
-    #     self.assertEqual(6, ll.at_position(4).value)
-    #     self.assertEqual(7, ll.at_position(5).value)
-    #     self.assertEqual(8, ll.at_position(6).value)
-    #     self.assertEqual(9, ll.at_position(7).value)
+    def test_insert_in_order_maintains_order_of_values(self):
+        """
+        Test 36: Inserting nodes of arbitrary values results in the list maintaining the
+        sorted order of nodes based on their value.
+        Example: inserting 8, 6, 7, 5, 3, 0, 9 results in: 0, 3, 5, 6, 7, 8, 9
+        """
+        values = [8, 6, 7, 5, 3, 0, 9]
+        ll = LinkedList()
+        for value in values:
+            ll.insert_in_order(LinkedList(value))
+        self.assertEqual(None, ll.at_position(0).value)
+        self.assertEqual(0, ll.at_position(1).value)
+        self.assertEqual(3, ll.at_position(2).value)
+        self.assertEqual(5, ll.at_position(3).value)
+        self.assertEqual(6, ll.at_position(4).value)
+        self.assertEqual(7, ll.at_position(5).value)
+        self.assertEqual(8, ll.at_position(6).value)
+        self.assertEqual(9, ll.at_position(7).value)
 
 
 def fake_value():

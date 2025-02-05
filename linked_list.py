@@ -76,7 +76,17 @@ class LinkedList:
         return self.next.at_position(position-1)
     
     def search(self, value):
-        if self.is_sentinel():
-            return None
         if self.value == value:
-            return self.search(value)
+            return self        
+        if self.is_empty():
+            return None
+        return self.next.search(value)
+    
+    def insert_in_order(self, node):
+        if self.next.value is None or node.value < self.next.value:
+            self.insert(node)
+        else:
+            self.next.insert_in_order(node)
+
+            
+
