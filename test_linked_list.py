@@ -286,87 +286,87 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(third_node, fourth_node.previous)
         self.assertEqual(fourth_node, third_node.next)
 
-    # # """
-    # # Deletion
-    # # """
+    # """
+    # Deletion
+    # """
 
-    # def test_delete(self):
-    #     """
-    #     Test 28: Deleting a node from the middle of a list removes it from the list.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     fourth_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     ll.append(fourth_node)
-    #     third_node.delete()
-    #     self.assertEqual(fourth_node, second_node.next)
-    #     self.assertEqual(second_node, fourth_node.previous)
+    def test_delete(self):
+        """
+        Test 28: Deleting a node from the middle of a list removes it from the list.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        fourth_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        ll.append(fourth_node)
+        third_node.delete()
+        self.assertEqual(fourth_node, second_node.next)
+        self.assertEqual(second_node, fourth_node.previous)
 
-    # # """
-    # # Insertion
-    # # """
+    # """
+    # Insertion
+    # """
 
-    # def test_insert(self):
-    #     """
-    #     Test 29: Inserting a node between two nodes places it between the two nodes.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     insertee = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     second_node.insert(insertee)
-    #     self.assertEqual(insertee, second_node.next)
-    #     self.assertEqual(second_node, insertee.previous)
-    #     self.assertEqual(insertee, third_node.previous)
-    #     self.assertEqual(third_node, insertee.next)
+    def test_insert(self):
+        """
+        Test 29: Inserting a node between two nodes places it between the two nodes.
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        insertee = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        second_node.insert(insertee)
+        self.assertEqual(insertee, second_node.next)
+        self.assertEqual(second_node, insertee.previous)
+        self.assertEqual(insertee, third_node.previous)
+        self.assertEqual(third_node, insertee.next)
 
-    # # """
-    # # Retrieval
-    # # """
+    # """
+    # Retrieval
+    # """
 
-    # def test_at(self):
-    #     """
-    #     Test 30: at_position(N) returns the Nth node in the list (where 0 is the sentinel.)
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList(fake_value())
-    #     third_node = LinkedList(fake_value())
-    #     fourth_node = LinkedList(fake_value())
-    #     ll.append(second_node)
-    #     ll.append(third_node)
-    #     ll.append(fourth_node)
-    #     self.assertEqual(second_node, ll.at_position(1))
-    #     self.assertEqual(third_node, ll.at_position(2))
-    #     self.assertEqual(fourth_node, ll.at_position(3))
+    def test_at(self):
+        """
+        Test 30: at_position(N) returns the Nth node in the list (where 0 is the sentinel.)
+        """
+        ll = LinkedList()
+        second_node = LinkedList(fake_value())
+        third_node = LinkedList(fake_value())
+        fourth_node = LinkedList(fake_value())
+        ll.append(second_node)
+        ll.append(third_node)
+        ll.append(fourth_node)
+        self.assertEqual(second_node, ll.at_position(1))
+        self.assertEqual(third_node, ll.at_position(2))
+        self.assertEqual(fourth_node, ll.at_position(3))
 
-    # # """
-    # # Search
-    # # """
+    # """
+    # Search
+    # """
 
-    # def test_search_returns_none_when_not_found(self):
-    #     """
-    #     Test 31: Searching for a node with a particular value that does not exist in the
-    #     linked list returns None.
-    #     """
-    #     ll = LinkedList()
-    #     second_node = LinkedList("FAKE")
-    #     self.assertEqual(None, ll.search("X"))
+    def test_search_returns_none_when_not_found(self):
+        """
+        Test 31: Searching for a node with a particular value that does not exist in the
+        linked list returns None.
+        """
+        ll = LinkedList()
+        second_node = LinkedList("FAKE")
+        self.assertEqual(None, ll.search("X"))
 
-    # def test_search_returns_node_when_found(self):
-    #     """
-    #     Test 32: Searching for a node with a particular value returns that node, if it
-    #     exists in the linked list.
-    #     """
-    #     value = "FAKE"
-    #     ll = LinkedList()
-    #     second_node = LinkedList(value)
-    #     ll.append(second_node)
-    #     self.assertEqual(second_node, ll.search(value))
+    def test_search_returns_node_when_found(self):
+        """
+        Test 32: Searching for a node with a particular value returns that node, if it
+        exists in the linked list.
+        """
+        value = "FAKE"
+        ll = LinkedList()
+        second_node = LinkedList(value)
+        ll.append(second_node)
+        self.assertEqual(second_node, ll.search(value))
 
     # # """
     # # Maintaining Order
